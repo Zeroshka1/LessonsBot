@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace LessonsBotDbProvider.ModelsDb
 {
-    public class BotProps
+    public class Bot
     {
         [Key]
-        public long IdBot { get; set; }
+        public Guid IdBot { get; set; }
 
         /// <summary>
         /// Токен для авторизации
@@ -26,11 +21,6 @@ namespace LessonsBotDbProvider.ModelsDb
         /// Список подключенных бесед
         /// </summary>
         public List<ChatTask> ChatTasks { get; set; }
-
-        /// <summary>
-        /// Таймер между чатами
-        /// </summary>
-        public int TimerChat { get; set; }
 
     }
 }

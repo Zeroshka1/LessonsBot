@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace LessonsBotDbProvider.ModelsDb
 {
     public class WordBook
     {
-        public List<string> Questions { get; set; }
-        public List<string> Answers { get; set; }
-        public List<string> Banned { get; set; }
+        [Key]
+        public long IdWord { get; set; }
+        public string Question { get; set; }
+        public string Answer { get; set; }
     }
 }

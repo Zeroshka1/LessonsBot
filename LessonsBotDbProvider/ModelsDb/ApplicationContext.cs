@@ -1,29 +1,30 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LessonsBotDbProvider.ModelsDb
 {
-    internal class ApplicationContext : DbContext
+    public class ApplicationContext : DbContext
     {
         /* КЕШИРОВАННЫЕ ДАННЫЕ */
         public DbSet<CachedGroup> CachedGroups { get; set; }
         public DbSet<CachedTeacher> CachedTeachers { get; set; }
         public DbSet<CachedCabs> CachedCabs { get; set; }
 
+        /* СЛОВАРИК */
+        public DbSet<WordBook> WordBooks { get; set; }
+
         /* БОТЫ */
-        public List<BotProps> Bots { get; set; }
+        public DbSet<Bot> Bots { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=local.db");
+            optionsBuilder.UseSqlite("Data Source=data.db");
             //Database.Migrate();
             base.OnConfiguring(optionsBuilder);
         }
+
+
+        public ApplicationContext()
+            => Database.Migrate();
         protected override void OnModelCreating(ModelBuilder builder)
         {
             //var splitStringConverter = new ValueConverter<IEnumerable<string>, string>(v => string.Join(";", v), v => v.Split(new[] { ';' }));
@@ -31,7 +32,6 @@ namespace LessonsBotDbProvider.ModelsDb
             //       .Property(nameof(Entity.SomeListOfValues))
             //       .HasConversion(splitStringConverter);
         }
-
 
     }
 }
