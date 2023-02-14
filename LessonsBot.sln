@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonsBotVk", "LessonsBotVk\LessonsBotVk.csproj", "{164700CD-65D1-43C5-9231-7B5F06C1D200}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonsBotDbProvider", "LessonsBotDbProvider\LessonsBotDbProvider.csproj", "{3C0652EC-5773-4F09-898A-8755DF0BDD97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{164700CD-65D1-43C5-9231-7B5F06C1D200}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164700CD-65D1-43C5-9231-7B5F06C1D200}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164700CD-65D1-43C5-9231-7B5F06C1D200}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164700CD-65D1-43C5-9231-7B5F06C1D200}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0652EC-5773-4F09-898A-8755DF0BDD97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0652EC-5773-4F09-898A-8755DF0BDD97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0652EC-5773-4F09-898A-8755DF0BDD97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0652EC-5773-4F09-898A-8755DF0BDD97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {058046D2-6B5D-4C30-97C2-1E1D147D8DA1}
+	EndGlobalSection
+EndGlobal
