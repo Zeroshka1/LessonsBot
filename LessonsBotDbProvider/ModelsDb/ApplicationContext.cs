@@ -15,10 +15,6 @@ namespace LessonsBotDbProvider.ModelsDb
         public DbSet<CachedTeacher> CachedTeachers { get; set; }
         public DbSet<CachedCabs> CachedCabs { get; set; }
 
-        /* СЛОВАРИК */
-
-
-
         /* БОТЫ */
         public List<BotProps> Bots { get; set; }
 

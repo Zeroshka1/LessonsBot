@@ -31,5 +31,6 @@ namespace LessonsBotDbProvider.ModelsDb
         /// Таймер между чатами
         /// </summary>
         public int TimerChat { get; set; }
+
     }
 }
