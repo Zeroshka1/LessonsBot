@@ -7,7 +7,7 @@ namespace LessonsBotDbProvider.ModelsDb
         [Key]
         public Guid IdWord { get; set; }
 
-        protected List<string> _questions;
+        public List<string> _questions;
 
         public string Questions
         {
@@ -22,14 +22,14 @@ namespace LessonsBotDbProvider.ModelsDb
 
                 foreach (var item in _questions)
                 {
-                    data += $"{item};";
+                    data += $"{item}";
                 }
 
                 return data;
             }
         }
 
-        protected List<string> _answers;
+        public List<string> _answers;
 
         public string Answers
         {
@@ -45,17 +45,22 @@ namespace LessonsBotDbProvider.ModelsDb
 
                 foreach (var item in _answers)
                 {
-                    data += $"{item};";
+                    data += $"{item}";
                 }
 
                 return data;
             }
         }
 
+
+
+        public DateTime CreatedDateTime { get; set; }
+
         public WordBook()
         {
             _questions = new List<string>();
             _answers = new List<string>();
+            CreatedDateTime = DateTime.Now;
         }
 
 

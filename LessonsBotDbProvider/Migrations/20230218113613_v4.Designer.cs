@@ -3,6 +3,7 @@ using System;
 using LessonsBotDbProvider.ModelsDb;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LessonsBotDbProvider.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20230218113613_v4")]
+    partial class v4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.2");
@@ -50,49 +53,41 @@ namespace LessonsBotDbProvider.Migrations
 
             modelBuilder.Entity("LessonsBotDbProvider.ModelsDb.CachedGroup", b =>
                 {
-                    b.Property<Guid>("IdGroupGuid")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("currator")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("id")
+                    b.Property<int?>("currator")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("IdGroupGuid");
+                    b.HasKey("id");
 
                     b.ToTable("CachedGroups");
                 });
 
             modelBuilder.Entity("LessonsBotDbProvider.ModelsDb.CachedTeacher", b =>
                 {
-                    b.Property<Guid>("IdTeacherGuid")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("id")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("IdTeacherGuid");
+                    b.HasKey("id");
 
                     b.ToTable("CachedTeachers");
                 });
 
             modelBuilder.Entity("LessonsBotDbProvider.ModelsDb.ChatTask", b =>
                 {
-                    b.Property<Guid>("IdTask")
+                    b.Property<long>("IdTask")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("INTEGER");
 
                     b.Property<Guid?>("BotIdBot")
                         .HasColumnType("TEXT");

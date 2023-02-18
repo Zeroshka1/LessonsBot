@@ -1,4 +1,5 @@
 ﻿using LessonsBotDbProvider.CacheDownloader;
+using LessonsBotDbProvider.ModelsDb;
 
 internal class Program
 {
@@ -8,5 +9,6 @@ internal class Program
 
         CacheController ef = new CacheController();
         ef.StartMigrate();
+
     }
 }

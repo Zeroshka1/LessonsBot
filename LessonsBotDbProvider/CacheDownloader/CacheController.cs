@@ -1,9 +1,6 @@
 ﻿
 using LessonsBotDbProvider.ModelsDb;
-using System.Net;
-using System;
 using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
 
 namespace LessonsBotDbProvider.CacheDownloader
 {
@@ -22,7 +19,7 @@ namespace LessonsBotDbProvider.CacheDownloader
 
             var groups = JsonSerializer.Deserialize<List<CachedGroup>>(GetJsonResponse("https://mfc.samgk.ru/api/groups"));
             var teachers = JsonSerializer.Deserialize<List<CachedTeacher>>(GetJsonResponse("https://asu.samgk.ru/api/teachers"));
-            var cabs = JsonSerializer.Deserialize<List<string>>(GetJsonResponse("https://asu.samgk.ru/api/cabs"));
+            //var cabs = JsonSerializer.Deserialize<List<string>>(GetJsonResponse("https://asu.samgk.ru/api/cabs"));
 
             foreach (var item in groups)
             {
