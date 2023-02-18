@@ -19,9 +19,17 @@ namespace LessonsBotDbProvider.ModelsDb
         public TypeTask Type { get; set; }
 
         /// <summary>
-        /// Значение 
+        /// Значение для АПИШКИ
         /// </summary>
         public string Value { get; set; }
+
+
+        public DateTime DateTimeCreateTask { get; set; }
+
+        public ChatTask()
+        {
+            DateTimeCreateTask = DateTime.Now;
+        }
     }
     
 

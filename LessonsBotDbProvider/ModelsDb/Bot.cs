@@ -22,5 +22,10 @@ namespace LessonsBotDbProvider.ModelsDb
         /// </summary>
         public List<ChatTask> ChatTasks { get; set; }
 
+
+        public Bot()
+        {
+            ChatTasks = new();
+        }
     }
 }

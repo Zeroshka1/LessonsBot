@@ -23,10 +23,14 @@ namespace LessonsBotDbProvider.ModelsDb
 
 
         public ApplicationContext()
-            => Database.Migrate();
+        {
+            Database.Migrate();
+            Database.AutoSavepointsEnabled = true;
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            
         }
 
     }

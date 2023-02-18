@@ -1,5 +1,6 @@
 ﻿
 using LessonsBotDbProvider.ModelsDb;
+using System.Net;
 using System.Text.Json;
 
 namespace LessonsBotDbProvider.CacheDownloader
