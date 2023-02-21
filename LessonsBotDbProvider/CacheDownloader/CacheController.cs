@@ -22,6 +22,11 @@ namespace LessonsBotDbProvider.CacheDownloader
             var teachers = JsonSerializer.Deserialize<List<CachedTeacher>>(GetJsonResponse("https://asu.samgk.ru/api/teachers"));
             //var cabs = JsonSerializer.Deserialize<List<string>>(GetJsonResponse("https://asu.samgk.ru/api/cabs"));
 
+
+            foreach(var item in teachers) {
+                //TO DO
+            }
+
             foreach (var item in groups)
             {
                 if (_ef.CachedGroups.Any(x => x.name == item.name))
